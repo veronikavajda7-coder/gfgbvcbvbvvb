@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sakura Dream 🌸</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Noto+Serif+JP:wght@200;300;400&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+<!-- Custom cursor -->
+<div class="cursor" id="cursor"></div>
+<div class="cursor-trail" id="cursorTrail"></div>
+
+<!-- Petal canvas -->
+<canvas id="petals"></canvas>
+
+<!-- ── HERO ── -->
+<section class="hero" id="hero">
+  <div class="hero-orb orb1"></div>
+  <div class="hero-orb orb2"></div>
+  <div class="hero-orb orb3"></div>
+
+  <div class="hero-content">
+    <div class="hero-eyebrow">
+      <span class="line"></span>
+      <span class="jp-text">桜　の　夢</span>
+      <span class="line"></span>
+    </div>
+    <h1 class="hero-title">
+      <span class="title-line" style="--d:0">Sakura</span>
+      <span class="title-line italic" style="--d:1">Dream</span>
+    </h1>
+    <p class="hero-desc">In the breath between bloom and fall, eternity lives. Journey into Japan's most sacred season — where anime meets ancient beauty.</p>
+    <div class="hero-actions">
+      <button class="btn-primary" id="enterBtn">Enter the Garden</button>
+      <button class="btn-ghost" id="gameBtn">🌸 Play Game</button>
+    </div>
+  </div>
+
+  <div class="hero-scroll">
+    <div class="scroll-line"></div>
+    <span>scroll</span>
+  </div>
+</section>
+
+<!-- ── ABOUT ── -->
+<section class="about" id="about">
+  <div class="about-inner">
+    <div class="about-text-side">
+      <p class="eyebrow">01 — Mono no Aware</p>
+      <h2 class="s-title">The <em>Soul</em><br>of Spring</h2>
+      <p class="body-text">Sakura — cherry blossoms — paint Japan pink for only one fleeting week. Their power lies in their brevity. This is <em>mono no aware</em>: the tender ache of beautiful things passing. Anime captures it perfectly — petals on a rooftop, a first meeting, a goodbye.</p>
+      <div class="stat-row">
+        <div class="stat"><span class="stat-num">1週</span><span class="stat-lbl">one week bloom</span></div>
+        <div class="stat"><span class="stat-num">200+</span><span class="stat-lbl">species of sakura</span></div>
+        <div class="stat"><span class="stat-num">千年</span><span class="stat-lbl">years of hanami</span></div>
+      </div>
+    </div>
+    <div class="about-visual">
+      <div class="img-stack">
+        <div class="img-frame frame1">
+          <img src="https://images.unsplash.com/photo-1522383225653-ed111181a951?w=700&q=85" alt="Sakura alley"/>
+        </div>
+        <div class="img-frame frame2">
+          <img src="https://images.unsplash.com/photo-1557409518-691ebcd96038?w=500&q=85" alt="Cherry blossom close"/>
+        </div>
+        <div class="float-tag">花見<br><small>Hanami</small></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── CARDS ── -->
+<section class="cards-section">
+  <p class="eyebrow center">02 — Essence</p>
+  <h2 class="s-title center">Three <em>Petals</em></h2>
+  <div class="cards-grid">
+    <div class="g-card" data-glow="pink">
+      <div class="card-number">一</div>
+      <div class="card-icon-wrap">🌸</div>
+      <h3>Mono no Aware</h3>
+      <p>The bittersweet awareness of impermanence. Sakura teaches us that beauty is sharpest when it cannot last.</p>
+      <div class="card-footer-line"></div>
+    </div>
+    <div class="g-card featured" data-glow="purple">
+      <div class="card-number">二</div>
+      <div class="card-icon-wrap">⛩️</div>
+      <h3>Hanami</h3>
+      <p>Ancient picnic tradition beneath blooming trees. Families, friends, sake — gathered under pink canopies since the 8th century.</p>
+      <div class="card-footer-line"></div>
+    </div>
+    <div class="g-card" data-glow="pink">
+      <div class="card-number">三</div>
+      <div class="card-icon-wrap">✨</div>
+      <h3>Anime Spirit</h3>
+      <p>From Clannad to Your Name — sakura frames the most emotional anime moments. Petals are cinema's most beautiful metaphor.</p>
+      <div class="card-footer-line"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ── GALLERY ── -->
+<section class="gallery" id="gallery">
+  <p class="eyebrow center">03 — Gallery</p>
+  <h2 class="s-title center">Petal <em>Visions</em></h2>
+  <div class="masonry">
+    <div class="m-item" style="--r:1;--c:1;--rs:2;--cs:2">
+      <img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=900&q=85" alt="Sakura sky"/>
+      <div class="m-label">Cherry Sky · 桜空</div>
+    </div>
+    <div class="m-item" style="--r:1;--c:3;--rs:1;--cs:1">
+      <img src="https://images.unsplash.com/photo-1540979388789-6cee28a1cdc9?w=600&q=85" alt="Japan street"/>
+      <div class="m-label">Night Bloom · 夜桜</div>
+    </div>
+    <div class="m-item" style="--r:2;--c:3;--rs:1;--cs:1">
+      <img src="https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=600&q=85" alt="Japan temple"/>
+      <div class="m-label">Temple · 寺院</div>
+    </div>
+    <div class="m-item" style="--r:3;--c:1;--rs:1;--cs:1">
+      <img src="https://images.unsplash.com/photo-1478436127897-769e1b3f0f36?w=600&q=85" alt="Sakura petals"/>
+      <div class="m-label">Petals · 花びら</div>
+    </div>
+    <div class="m-item" style="--r:3;--c:2;--rs:1;--cs:2">
+      <img src="https://images.unsplash.com/photo-1440342359743-84fcb8c21f21?w=900&q=85" alt="Sakura river"/>
+      <div class="m-label">River of Petals · 花川</div>
+    </div>
+    <div class="m-item" style="--r:4;--c:1;--rs:1;--cs:2">
+      <img src="https://images.unsplash.com/photo-1490806843957-31f4c9a91c65?w=800&q=85" alt="Pink blossoms"/>
+      <div class="m-label">Full Bloom · 満開</div>
+    </div>
+    <div class="m-item" style="--r:4;--c:3;--rs:1;--cs:1">
+      <img src="https://images.unsplash.com/photo-1542051841857-5f90071e7989?w=600&q=85" alt="Tokyo"/>
+      <div class="m-label">Tokyo · 東京</div>
+    </div>
+  </div>
+</section>
+
+<!-- ── QUOTES ── -->
+<section class="quotes-section" id="quotes">
+  <p class="eyebrow center">04 — Wisdom</p>
+  <h2 class="s-title center">Words Like <em>Petals</em></h2>
+  <div class="quotes-track-wrap">
+    <div class="quotes-track" id="quotesTrack">
+      <div class="q-card">
+        <div class="q-jp">儚い</div>
+        <p>"In the spring, I did not know that the cherry blossoms were saying goodbye."</p>
+        <span>— Japanese Haiku</span>
+      </div>
+      <div class="q-card">
+        <div class="q-jp">美しい</div>
+        <p>"The cherry blossom is beautiful precisely because it falls."</p>
+        <span>— Kenji Miyazawa</span>
+      </div>
+      <div class="q-card">
+        <div class="q-jp">春風</div>
+        <p>"To watch petals fall in the wind — this is the meaning of life in a single breath."</p>
+        <span>— Zen Proverb</span>
+      </div>
+      <div class="q-card">
+        <div class="q-jp">物の哀れ</div>
+        <p>"Spring passes and one remembers one's innocence. Summer passes and one remembers one's exuberance."</p>
+        <span>— Yoko Ono</span>
+      </div>
+      <div class="q-card">
+        <div class="q-jp">桜木</div>
+        <p>"Among flowers the cherry blossom, among men the warrior."</p>
+        <span>— Japanese Proverb</span>
+      </div>
+      <div class="q-card">
+        <div class="q-jp">夢</div>
+        <p>"Even the most beautiful sakura must fall. But while it blooms, the whole world stops to look."</p>
+        <span>— Anonymous</span>
+      </div>
+    </div>
+  </div>
+  <div class="q-controls">
+    <button class="q-btn" id="qPrev">←</button>
+    <div class="q-dots" id="qDots"></div>
+    <button class="q-btn" id="qNext">→</button>
+  </div>
+</section>
+
+<!-- ── GAME MODAL ── -->
+<div class="game-modal" id="gameModal">
+  <div class="game-panel">
+    <button class="game-close" id="gameClose">✕</button>
+    <div class="game-header">
+      <h2>🌸 Catch the Petals</h2>
+      <p class="game-sub">花びらを捕まえて — Click falling petals before they vanish!</p>
+    </div>
+    <div class="game-hud">
+      <div class="hud-item"><span class="hud-label">Score</span><span class="hud-val" id="score">0</span></div>
+      <div class="hud-item"><span class="hud-label">Time</span><span class="hud-val" id="timer">30</span></div>
+      <div class="hud-item"><span class="hud-label">Best</span><span class="hud-val" id="best">0</span></div>
+    </div>
+    <div class="game-area" id="gameArea">
+      <div class="game-ready" id="gameReady">
+        <div class="game-ready-icon">🌸</div>
+        <p>Ready to catch petals?</p>
+        <button class="btn-start" id="startBtn">Start Game</button>
+      </div>
+      <div class="game-over-screen" id="gameOver" style="display:none">
+        <div class="go-icon">🌸</div>
+        <h3>Time's Up!</h3>
+        <p class="go-score">You caught <span id="finalScore">0</span> petals</p>
+        <button class="btn-start" id="restartBtn">Play Again</button>
+      </div>
+    </div>
+    <div class="game-tip">💡 Tip: Golden petals = 3 points! Pink = 1 point</div>
+  </div>
+</div>
+
+<!-- ── FOOTER ── -->
+<footer class="footer">
+  <div class="footer-bloom">🌸</div>
+  <p class="footer-logo">Sakura Dream</p>
+  <p class="footer-jp">桜の夢 — Beauty in impermanence</p>
+  <div class="footer-divider"></div>
+  <p class="footer-copy">Made with love & petals</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
